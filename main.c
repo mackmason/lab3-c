@@ -38,6 +38,7 @@ void run() {
   printf("sum is %i.\n",sumNewNumber);
   char *printString = readline("Enter a string: ");
   print_n(printString,sumIntNumber);
+  return;
 }
 
 int main(void) {
