@@ -9,51 +9,38 @@
 #include <readline/readline.h>
 #include <stdlib.h>
 
-int sum_n(int n)
-  {
-  if (n <= 0) 
-  {
+int sum_n(int n) {
+  if (n <= 0) {
     return 0;
     }
-  else 
-  {
+  else {
     return n + sum_n(n-1);
     }
   }
 
-void print_n(const char *s, int n)
-{
-  if (n == 0) 
-  {
+void print_n(const char *s, int n) {
+  if (n == 0) {
     return;
   }
-  if (n == 1)
-  {
+  else if (n == 1) {
    printf("%s\n", s);
   }
-  else
-  {
+  else {
     printf("%s\n", s);
     print_n(s, n-1);
   }
 }
 
-void run() 
-{
-
+void run() {
   char *sumNumber = readline("Enter an int: ");
   int sumIntNumber = atoi(sumNumber);
   int sumNewNumber = sum_n(sumIntNumber);
   printf("sum is %i.\n",sumNewNumber);
   char *printString = readline("Enter a string: ");
   print_n(printString,sumIntNumber);
-
 }
 
-int main(void) 
-{
-
+int main(void) {
 run();
 return 0;
-
 }
