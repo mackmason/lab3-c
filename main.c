@@ -29,31 +29,31 @@ void print_n(const char *s, int n)
   }
   if (n == 1)
   {
-   printf(s);
+   printf("%s\n", s);
   }
   else
   {
-    printf(s);
-    prinft_n(s, n-1);
+    printf("%s\n", s);
+    print_n(s, n-1);
   }
 }
 
-void run() {
+void run() 
+{
 
   char *sumNumber = readline("Enter an int: ");
   int sumIntNumber = atoi(sumNumber);
   int sumNewNumber = sum_n(sumIntNumber);
-  printf("sum is %i.",sumNewNumber);
+  printf("sum is %i.\n",sumNewNumber);
   char *printString = readline("Enter a string: ");
   print_n(printString,sumIntNumber);
 
 }
 
-int main(void) {
+int main(void) 
+{
 
-  
-  
-
+run();
 return 0;
 
 }
